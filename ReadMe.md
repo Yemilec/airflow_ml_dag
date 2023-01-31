@@ -13,7 +13,7 @@ Both folders (*dags* and *data*) must be into the airflow home (i.e. *~/airflow/
 Use the command line to do metadata validation.
 In the terminal run 
 ```
-airflow tasks list my_airflow_dag --tree
+airflow tasks list ml_pipeline --tree
 ```
 to print the hierarchy of tasks in the DAG.
 
@@ -30,7 +30,7 @@ To validate that the outputs files were generated correctly
 ls ~/airflow/data/output/german-credit-data-with-risk/parquets/
 ```
 
-
 ## To Do
 Refactor methods with design patterns
 
+Assuming that this data frame was to be used later for data analysis or as a data source for some other process, we should consider moving the data to a database where it might be convenient to consider some logical or physical partitioning of this, depending on the use and frequency with which it is consulted.
